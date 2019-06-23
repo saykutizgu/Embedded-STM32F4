@@ -58,9 +58,9 @@ void calibration(){
 	TemperatureValue *= 3300;
 	TemperatureValue /= 0xfff; //Reading in mV
 	TemperatureValue /= 1000.0; //Reading in Volts
-	TemperatureValue -= 0.760; // Subtract the reference voltage at 25°C
+	TemperatureValue -= 0.760; // Subtract the reference voltage at 25Â°C
 	TemperatureValue /= .0025; // Divide by slope 2.5mV
-	TemperatureValue += 25.0; // Add the 25°C
+	TemperatureValue += 25.0; // Add the 25Â°C
 	*/
-																						   // Calibration Values is Found Online for My Microcontroller (STM32F401RE)
+							                                       // Calibration Values is Found Online for My Microcontroller (STM32F401RE)
 }
