@@ -62,5 +62,5 @@ void calibration(){
 	TemperatureValue /= .0025; // Divide by slope 2.5mV
 	TemperatureValue += 25.0; // Add the 25°C
 	*/
-							                                       // Calibration Values is Found Online for My Microcontroller (STM32F401RE)
+							                                       // Calibration Values is Found Online for My Microcontroller's(STM32F401RE) Temperature Sensor
 }
