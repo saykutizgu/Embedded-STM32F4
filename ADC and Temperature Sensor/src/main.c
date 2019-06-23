@@ -25,10 +25,10 @@ void initHw(){
 	ADC_CommonInitTypeDef ADC_CommonInitStruct;
 
 	ADC_initStruct.ADC_ContinuousConvMode = ENABLE;                                        // ADC Configuration
-	ADC_initStruct.ADC_ExternalTrigConv = ADC_ExternalTrigConvEdge_None;
-	ADC_initStruct.ADC_NbrOfConversion = 1;
-	ADC_initStruct.ADC_Resolution = ADC_Resolution_12b;
-	ADC_initStruct.ADC_ScanConvMode = DISABLE;
+	ADC_initStruct.ADC_ExternalTrigConv = ADC_ExternalTrigConvEdge_None;                   // External Trigger of Conversion Disabled
+	ADC_initStruct.ADC_NbrOfConversion = 1;                                                // Number of Conversion
+	ADC_initStruct.ADC_Resolution = ADC_Resolution_12b;                                    // 12-bit Resolution
+	ADC_initStruct.ADC_ScanConvMode = DISABLE;                                             // Scan(Multi Channel) Conversion Disabled
 	ADC_Init(ADC1, &ADC_initStruct);
 	ADC_CommonInit(&ADC_CommonInitStruct);
 	ADC_CommonStructInit(&ADC_CommonInitStruct);
