@@ -3,7 +3,7 @@
 #define slaveAdd 0xD0 									// Slave address of mpu6050 with (0x68 << 1) operation already done for i2c_bus_start
 
 uint16_t gyro_XH = 0;  									// Gyroscope High Value for X
-uint8_t gyro_XL = 0;  									// Gyroscope Low Value for X
+uint16_t gyro_XL = 0;  									// Gyroscope Low Value for X
 
 uint16_t rawGyro = 0;									// Gyroscope Raw Value
 
