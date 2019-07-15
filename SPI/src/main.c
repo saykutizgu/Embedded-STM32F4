@@ -23,7 +23,7 @@ void initHw(void){
 
 	RCC->CFGR = 0;
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI3, ENABLE);                                             // SPI3 Clock Enabled
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC | RCC_AHB1Periph_GPIOB, ENABLE);                     // GPIOC&B Clock Enabled
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC | RCC_AHB1Periph_GPIOB, ENABLE);                     // GPIOC & GPIOB Clock Enabled
 
 	SPI_InitTypeDef SPI_InitStructure;
 	GPIO_InitTypeDef GPIO_InitStructure;
