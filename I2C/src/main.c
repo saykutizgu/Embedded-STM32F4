@@ -5,7 +5,7 @@
 uint8_t gyro_XH = 0;  									// Gyroscope High Value for X
 uint8_t gyro_XL = 0;  									// Gyroscope Low Value for X
 
-uint8_t rawGyro = 0;									// Gyroscope Raw Value
+uint16_t rawGyro = 0;									// Gyroscope Raw Value
 
 void initHw();
 void i2c_bus_start(I2C_TypeDef* I2Cx, uint8_t address, uint8_t direction);
