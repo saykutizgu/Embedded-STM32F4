@@ -30,8 +30,8 @@ int main(void)
 	  weekday = (((RTC->DR) & 0xE000)  >> 13);                                                        // Read Weekday Number
 	  thisDay = whichDay(weekday);                                                                    // Weekday Number to Enum
 	  date    = (RTC->DR) & 0xFF;                                                                     // Read Date
-      month   = (((RTC->DR) & 0x1000)   >> 12) * 10 + (((RTC->DR) & 0xF00) >> 8);                     // Read Month
-      year    = (((RTC->DR) & 0xFF0000) >> 16)      + 2000;                                           // Read Year
+          month   = (((RTC->DR) & 0x1000)   >> 12) * 10 + (((RTC->DR) & 0xF00) >> 8);                     // Read Month
+          year    = (((RTC->DR) & 0xFF0000) >> 16)      + 2000;                                           // Read Year
   }
 }
 
@@ -62,8 +62,7 @@ void INIT_RTC_STD_PERIPH_DRIVER_FUNC(){
 	RTC_timeInitStruct.RTC_Seconds = 00;                                                              // Seconds to Start
 
 	RTC_SetTime(RTC_Format_BCD, &RTC_timeInitStruct);                                                 // Set Time in BCD Format
-	//RTC_TimeStructInit(&RTC_timeInitStruct);                                                          // Initialize Time Settings
-
+	
 /****************************************DATE CONFIGURATION*********************************************/
 
 
@@ -72,9 +71,8 @@ void INIT_RTC_STD_PERIPH_DRIVER_FUNC(){
 	RTC_dateInitStruct.RTC_WeekDay = RTC_Weekday_Saturday;                                            // Weekday to Start
 	RTC_dateInitStruct.RTC_Year = 19;                                                                 // Year to Start (20xx)
 
-    RTC_SetDate(RTC_Format_BCD,&RTC_dateInitStruct);                                                  // Set Date in BCD Format
-	//RTC_DateStructInit(&RTC_dateInitStruct);                                                        // Initialize Date Settings
-
+        RTC_SetDate(RTC_Format_BCD,&RTC_dateInitStruct);                                                  // Set Date in BCD Format
+	
 /**************************************ALARM IMPLEMENTATION*********************************************/
 
 	RTC_AlarmStruct.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_WeekDay;                        // Alarm Based on Weekday or Date Setting
@@ -89,8 +87,8 @@ void INIT_RTC_STD_PERIPH_DRIVER_FUNC(){
 
 }
 
-uint8_t whichDay(uint8_t weekDay){                                                                    // Function that Converts Integer Values to Enumerated Constants
-                                                                                                      // Based on the Weekday Register Number
+uint8_t whichDay(uint8_t weekDay){                                                                        // Function that Converts Integer Values to Enumerated Constants
+                                                                                                          // Based on the Weekday Register Number
 	                                                                                                  // And Returns the Enumerated Value
 	switch (weekDay){
 
