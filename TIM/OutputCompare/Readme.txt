@@ -15,3 +15,7 @@ Now the output gets low Timer Counter value > Timer Pulse value. (Inactive Confi
 Timer 2 Channel 1 is used in Input Capture mode to detect a falling edge on Timer 3 Channel 3 output, and change Timer 3 Channel 3's Output Compare pulse value and operation mode (Changes From Inactive -> Active In Timer 2 Interrupt).
 
 This way we get a custom square wave output from Timer 3 Channel 3 Output Using 2 Timers one in Input Capture and one in Output Compare.
+
+I used GPIOA, GPIOB, GPIOC, TIM2, TIM3 and NVIC peripherals in this example.
+
+I also used my 8 MHz external clock as source with PLL Configuration.
